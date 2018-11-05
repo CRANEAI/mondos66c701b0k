@@ -1,16 +1,16 @@
+import { combineReducers } from "redux"
+import { reducer as Form } from "redux-form"
 
-        import { combineReducers }                      from 'redux';
-        import { reducer as Form }                      from 'redux-form';
+import signup from "./reducer_signup"
+import create_account from "./reducer_create_account"
+import payment from "./reducer_payment"
+import live from "./reducer_live"
 
-        import movies from './reducer_movies' 
-import archibald_fountain._1a_prince_albe... from './reducer_archibald_fountain._1a_prince_albe...'
+const rootReducer = combineReducers({
+  signup: signup,
+  create_account: create_account,
+  payment: payment,
+  live: live
+})
 
-        const rootReducer = combineReducers({
-            movies : movies 
-,archibald_fountain._1a_prince_albe... : archibald_fountain._1a_prince_albe... 
-
-        })
-
-        export default rootReducer;
-
-        
+export default rootReducer
